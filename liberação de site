@@ -2,7 +2,8 @@
 
 int main(){
 int idade;
-printf("Você é maior de 18 anos?");
+printf("Você é maior de 18 anos?\n");
+printf("Digite sua idade: ");
 scanf("%d", &idade);    
 if (idade >= 18) {
     printf("Bem-vindo! Você pode prosseguir.\n");

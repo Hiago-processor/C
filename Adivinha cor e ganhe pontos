@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+int pontos = 0;
+char cor[20];
+cor == "roxo";
+    printf("  *****************\n  *Adivinhe A Cor *\n  *****************\n");
+    printf("Pontos:%d\n", pontos);
+    printf ("A cor tem 4 letras\n");
+    scanf("%s", cor);
+    if (strcmp(cor, "roxo") == 0){
+        printf ("Parabéns!\n");
+        pontos++;
+           printf("Você ganhou seu primeiro ponto!\nPontos:%d", pontos);
+    } else{
+        printf ("Você errou!");
+    }
+    return 0;
+}

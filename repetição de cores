@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    char cor1[20], cor2[20], cor3[20];
+    
+    while (i < 5) {
+        printf("\n=== Iteração %d ===\n", i);
+        
+        printf("Digite a cor 1: ");
+        scanf("%s", cor1);
+        
+        printf("Digite a cor 2: ");
+        scanf("%s", cor2);
+        
+        printf("Digite a cor 3: ");
+        scanf("%s", cor3);
+        
+        printf("Cores digitadas: %s, %s, %s\n", cor1, cor2, cor3);
+        i++;
+    }
+    
+    return 0;
+}

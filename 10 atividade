@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n50, n10, n1, total, s;
+    printf("Quantas notas você deseja sacar?\nR:");
+    scanf("%d", &s);
+    
+    n50 = s / 50;
+    s =  s % 50;
+    
+    n10 = s / 10;
+    s = s % 10;
+    
+    n1 = s / 1;
+    s = s % 1;
+    total = n50 + n10 + n1;
+    
+    printf("\nNumero total de notas: %d", total);
+    printf("\nNumero total de notas de 50: %d", n50);
+    printf("\nNumero total de notas de 10: %d", n10);
+    printf("\nNuero total de notas de 1: %d", n1);
+    return 0;
+}

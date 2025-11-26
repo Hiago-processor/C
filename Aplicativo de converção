@@ -1,0 +1,30 @@
+#include <stdio.h>
+    int main(){
+int metros, decimetros, quilometro, centimetro, milimetro, micrometro, nenometro, milha, jarda, pe, polegada, milha_nautica, c;
+    
+    printf("Bem vindo ao medidor de metros para outros tipos de comprimentos.\n");
+     printf("Escolha um numero em metros, e depois escolha no que você quer converter.\n");
+    
+    printf("\nQual o valor em metros: ");
+    scanf("%d", &metros);
+    
+    printf("escolha o comprimento que você deseja converter:\n decimetro - 1\n quilometro - 2\n centrimetro - 3\n milimetro - 4\n micrometro - 5\n nenometro - 6\n milha - 7\n jarda - 8\n pe - 9\n polegada - 10\n milha nautica - 11\n R:");
+    scanf("%d", &c);
+        
+        switch (c){
+            case 1:
+                decimetros = metros * 10;
+                printf("Valor em decimetros é: %d", decimetros);
+            break;
+            case 2:
+                quilometro = metros / 1000;
+                printf("Valor em quilometros é: %d", quilometro);
+            break;
+            
+            default:
+                printf("\nVocê digitou um numero errado, colocou letra ou só apertou em enter..");
+        }
+        
+        return 0;
+        
+    }

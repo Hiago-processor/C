@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main(){
+    int metros, decimetros, milimetros;
+    
+    printf("Coloque algum valor em metros\nR: ");
+    scanf("%d", &metros);
+    
+    decimetros = metros * 10;
+    milimetros = metros * 1000;
+    
+    printf("Tabela de comprimentos:\n Metros:%d \n Decimetros:%d\n Milimetros:%d", metros, decimetros, milimetros);
+}

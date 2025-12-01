@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>    
     int main(){
 int metros, decimetros, quilometro, centimetro, milimetro, micrometro, nenometro, milha, jarda, pe, polegada, milha_nautica, c;
     
@@ -8,7 +9,7 @@ int metros, decimetros, quilometro, centimetro, milimetro, micrometro, nenometro
     printf("\nQual o valor em metros: ");
     scanf("%d", &metros);
     
-    printf("escolha o comprimento que você deseja converter:\n decimetro - 1\n quilometro - 2\n centrimetro - 3\n milimetro - 4\n micrometro - 5\n nenometro - 6\n milha - 7\n jarda - 8\n pe - 9\n polegada - 10\n milha nautica - 11\n R:");
+    printf("escolha o comprimento que você deseja converter:\n decimetro - 1\n quilometro - 2\n centimetro - 3\n milimetro - 4\n micrometro - 5\n nenometro - 6\n milha - 7\n jarda - 8\n pe - 9\n polegada - 10\n milha nautica - 11\n R:");
     scanf("%d", &c);
         
         switch (c){
@@ -20,7 +21,22 @@ int metros, decimetros, quilometro, centimetro, milimetro, micrometro, nenometro
                 quilometro = metros / 1000;
                 printf("Valor em quilometros é: %d", quilometro);
             break;
-            
+            case 3:
+                centimetro = metros * 100;
+                printf("Valor em centimetro é: %d", centimetro);
+                break;
+            case 4:
+                milimetro = metros * 1000;
+                printf("Valor em milimetros é: %d", milimetro);
+                break;
+            case 5:
+                micrometro = metros * 1000000;
+                printf("Valor em micrometro é: %d", micrometro);
+                break;
+            case 6:
+                nenometro = metros * 1000000000;
+                printf("Valor em nenometro é: %d", nenometro);
+                break;
             default:
                 printf("\nVocê digitou um numero errado, colocou letra ou só apertou em enter..");
         }

@@ -1,15 +1,33 @@
 #include <stdio.h>
-#include <math.h>    
+#define conversao6 1852.0    
+    
     int main(){
-int metros, decimetros, quilometro, centimetro, milimetro, micrometro, nenometro, milha, jarda, pe, polegada, milha_nautica, c;
+
+//essa conversao é do polegada
+const double conversao5 = 39.37;
+
+//essa conversao é do pe
+const double conversao4 =  3.281;
+
+//essa conversao é do jarda
+const double conversao3 = 1.09361;
+
+//Essa conversão é do micrometro
+const double conversao2 = 1e6;
+
+//Essa conversão é do nanometro
+const double conversao = 1e9;
+
+double metros, decimetros, quilometro, centimetro, milimetro, micrometro, nanometro, milha, jarda, pe, polegada, milha_nautica;
+int c;
     
     printf("Bem vindo ao medidor de metros para outros tipos de comprimentos.\n");
      printf("Escolha um numero em metros, e depois escolha no que você quer converter.\n");
     
     printf("\nQual o valor em metros: ");
-    scanf("%d", &metros);
+    scanf("%lf", &metros);
     
-    printf("escolha o comprimento que você deseja converter:\n decimetro - 1\n quilometro - 2\n centimetro - 3\n milimetro - 4\n micrometro - 5\n nenometro - 6\n milha - 7\n jarda - 8\n pe - 9\n polegada - 10\n milha nautica - 11\n R:");
+    printf("escolha o comprimento que você deseja converter:\n decimetro - 1\n quilometro - 2\n centimetro - 3\n milimetro - 4\n micrometro - 5\n nanometro - 6\n milha - 7\n jarda - 8\n pe - 9\n polegada - 10\n milha nautica - 11\n R:");
     scanf("%d", &c);
         
         switch (c){
@@ -19,23 +37,45 @@ int metros, decimetros, quilometro, centimetro, milimetro, micrometro, nenometro
             break;
             case 2:
                 quilometro = metros / 1000;
-                printf("Valor em quilometros é: %d", quilometro);
+                printf("Valor em quilometros é: %lfkl", quilometro);
             break;
             case 3:
                 centimetro = metros * 100;
-                printf("Valor em centimetro é: %d", centimetro);
+                printf("Valor em centimetro é: %lf", centimetro);
                 break;
             case 4:
                 milimetro = metros * 1000;
-                printf("Valor em milimetros é: %d", milimetro);
+                printf("Valor em milimetros é: %lf", milimetro);
                 break;
             case 5:
-                micrometro = metros * 1000000;
-                printf("Valor em micrometro é: %d", micrometro);
+                micrometro = metros * conversao2;
+                printf("Valor em micrometro é: %e nm\n", micrometro);
+                printf("Em notação cientifica padrão (com 2 casas decimais): %.1e nm\n", nanometro);
                 break;
             case 6:
-                nenometro = metros * 1000000000;
-                printf("Valor em nenometro é: %d", nenometro);
+                nanometro = metros * conversao;
+                printf("Valor em nenometro é: %e nm\n", nanometro);
+                    printf("Em notação científica padrão (com 2 casas decimais): %.1e nm\n", nanometro);
+                break;
+            case 7:
+                milha = metros / 1610;
+                printf("Valor em milha é: %lf", milha);
+                break;
+            case 8:
+                jarda = metros * conversao3;
+                printf("Valor em jardas é: %lf", jarda);
+                break;
+            case 9:
+                pe = metros * conversao4;
+                printf("Valor em pe é: %lf", pe);
+                break;
+            case 10:
+                polegada = metros * conversao5;
+                printf("Valor em polegada é: %lf", polegada);
+                break;
+            case 11:
+                milha_nautica = metros / conversao6;
+                printf("Valor em milha nautica é: %6lf", milha_nautica);
                 break;
             default:
                 printf("\nVocê digitou um numero errado, colocou letra ou só apertou em enter..");
